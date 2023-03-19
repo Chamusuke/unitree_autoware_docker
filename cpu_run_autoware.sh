@@ -13,4 +13,4 @@ docker run -it --rm --name unitree \
 	--env=DISPLAY=$DISPLAY \
 	--env=USER_ID=$(id -u) \
 	--privileged --net=host \
-       	unitree/autoware:0.0
+       	chamusuke/unitree_autoware:0.0

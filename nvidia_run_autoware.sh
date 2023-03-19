@@ -15,4 +15,4 @@ docker run -it --rm --name unitree -e DISPLAY=$DISPLAY \
 	--runtime=nvidia \
 	-e NVIDIA_VISIBLE_DEVICES=all \
 	-e NVIDIA_DRIVER_CAPABILITIES=all \
-       	unitree/autoware:0.0
+       	chamusuke/unitree_autoware:0.0
