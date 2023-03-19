@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="unitree_legged_real" type="filter_lcm" name="MoveMean_filter" />
+    </node>
+    <node pkg="unitree_legged_real" type="filter_lcm" name="key_control"output="screen" >
+    </node>
+<launch>
