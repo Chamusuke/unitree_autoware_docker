@@ -1,3 +1,3 @@
-FROM unitree/:autoware:0.0
+FROM chamusuke/unitree_autoware:0.0
 
 
