@@ -1,0 +1,33 @@
+#------------------------------------------------------
+# 参照のディレクトリのパスは各自書き換え
+#　＞＞--volume=$HOME/19X0118/Unitree/autoware_dir:/home/autoware/shared_dir:rw "
+# 新しいPCでの起動時はコンテナにログイン後、権限の都合上devel buildを削除して再コンパイルする
+# $ sudo rm -r ~/shared_dir/autoware_docker_ws/devel build
+# $ cd ~/shared_dir/autoware_docker_ws && catkin_make
+
+
+#------------------------------------------------------
+# docker内での apt コマンドについて
+# 新しいPCではGPGエラーが起きてaptコマンドが利用できない場合がある
+# keyサーバーから新たに認証を取得して解決できる
+#　GPG error: http://ppa.launchpad.net trusty InRelease: 
+#     The following signatures couldn't be verified because the public key is not available: 
+#     NO_PUBKEY 4F4EA0AAE5267A6C <--パブリックキーは環境によって変わるので、コピペする
+# $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C
+
+
+#------------------------------------------------------
+# ログアウトは、$ exit  --rmによってコンテナは自動的に破棄ー＞share_dir以外は保存されない
+# 保存するには、新しくDocker imageを作成する
+# Ctrl+P+Qの順でコンテナを破棄せずログアウト + Enter 
+# $ docker commit unitree image名:タグ　例　unitree:2.1.0 unitree/nakamura:sample
+# $ docker stop unitree
+# 作成イメージでコンテナを立ち上げるため、run_autoware.sh内のイメージ名を変更
+#------------------------------------------------------
+#------------------------------------------------------
+#"NVIDIAのGPUのみ追加で設定が必要　ない場合はコメントアウト"
+#"--runtime=nvidia dockerは隔離された環境なので外部GPUをアクセス設定"
+#"-e NVIDIA_VISIBLE_DEVICES=0  GPUデバイスの確認　番号を指定 all"
+#"-e NVIDIA_DするRIVER_CAPABILITIES=all　GPUサポートを選択　utility, cuda, all　詳細はNVIDIAの公式ページ参照"
+
+
