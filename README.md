@@ -21,19 +21,56 @@ docker pull chamusuke/unitree_autoware:0.0
 ```
  You can start software.
 ```
-docker run chamusuke/unitree_autoware:0.0
+cd ~/unitree_autoware_docker
+bash cpu_run_autoware.sh
+```
+
+If you use NVIDIA GPU, you can run CUDA.
+```
+bash nvidia_run_autoware.sh
 ```
 
 
 # build
  You must need to build Ros program.
+ ROS compiler's in docker container.
 ```
 cd shared_dir/autoware_docker_ws && catkin_make
 ```
 
 # Hardware setting
- You need to connect Uintree to PC and LiDAR via Ethernet
- In addition, setting IP address on PC and LiDAR
- 
+ You need to connect Uintree to PC and LiDAR via Ethernet.
+ In addition, setting IP address on PC and LiDAR.
 
-# Software setting
+# Autoware start 
+ You need to enter the following command in the container.
+ and make subterminal.
+```
+cd ~/shared_dir/launch_sh
+gnome-terminal
+```
+ You can start autoware with this command.
+```
+bash runtime_manager.sh
+```
+
+# unitree control
+-Manual keybord control
+If it does not start, you must enter the commands one at a time.
+
+```
+cd ~/shared_dir/launch_sh/manual_control
+bash unitree_LCM.sh
+bash imu.sh
+bash filter_control.sh
+bash keybord_control.sh
+```
+
+-Autoware control 
+```
+cd ~/shared_dir/launch_sh/auto_pilot
+bash unitree_LCM.sh
+bash imu.sh
+bash autoware_control.sh
+bash safety.sh
+```
