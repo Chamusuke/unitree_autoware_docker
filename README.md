@@ -55,10 +55,11 @@ bash runtime_manager.sh
 ```
 
 # unitree control
--Manual keybord control
-If it does not start, you must enter the commands one at a time.
+## Manual keybord control
 
 ![localization_system](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/1721a68d-544a-4769-88eb-1519988e03d6)
+
+If it does not start, you must enter the commands one at a time.
 
 ```
 cd ~/shared_dir/launch_sh/manual_control
@@ -68,12 +69,17 @@ bash filter_control.sh
 bash keybord_control.sh
 ```
 
--Autoware control 
+## Autoware control 
+
 ![Auto_pilot](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/5c10b394-ba5a-4da4-bb59-39241cf9bd52)
+
+In order to avoid sudden start,
+When you run safety.sh, You need to push "b". 
+
 ```
 cd ~/shared_dir/launch_sh/auto_pilot
 bash unitree_LCM.sh
 bash imu.sh
-bash autoware_control.sh
 bash safety.sh
+bash autoware_control.sh
 ```
