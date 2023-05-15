@@ -74,7 +74,7 @@ bash keybord_control.sh
 ![Auto_pilot](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/5c10b394-ba5a-4da4-bb59-39241cf9bd52)
 
 In order to avoid sudden start,
-When you run safety.sh, You need to push "b". 
+When you run safety.sh, you need to push "b". 
 
 ```
 cd ~/shared_dir/launch_sh/auto_pilot
