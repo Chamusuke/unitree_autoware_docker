@@ -58,6 +58,8 @@ bash runtime_manager.sh
 -Manual keybord control
 If it does not start, you must enter the commands one at a time.
 
+![localization_system](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/1721a68d-544a-4769-88eb-1519988e03d6)
+
 ```
 cd ~/shared_dir/launch_sh/manual_control
 bash unitree_LCM.sh
@@ -67,6 +69,7 @@ bash keybord_control.sh
 ```
 
 -Autoware control 
+![Auto_pilot](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/5c10b394-ba5a-4da4-bb59-39241cf9bd52)
 ```
 cd ~/shared_dir/launch_sh/auto_pilot
 bash unitree_LCM.sh
