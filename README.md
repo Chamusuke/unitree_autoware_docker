@@ -87,3 +87,7 @@ bash imu.sh
 bash safety.sh
 bash autoware_control.sh
 ```
+
+# mapping
+![pcd_data_no2](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/a6fec5b7-9fef-44a2-8ff2-02923bc7e804)
+
