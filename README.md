@@ -1,6 +1,6 @@
 # unitree_autoware_docker
 
-# Introduction
+## Introduction
 　This software is intreface of Unitree Go1 EDU on Autoware and Autoware.AI.
  
 　This implements the control interface of UnitreeGO1EDU in the automatic operation software (Autoware), which enables the actual operation of the device by Autoware.
@@ -11,14 +11,14 @@
 ![Auto_pilot_8](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/e3c4bc2e-8948-4379-9074-b921d219fc3e)
 
  
-# Dependencies
+## Dependencies
 - Linux PC (Ubuntu18.04 or 20.04 is checked to run on this software)
 - docker
 - unitree Go1 EDU
 - LiDAR veldyne VLP-16
 
 
-# Install && Software start
+## Install && Software start
  You need to pull docker image from DockerHub．
 ```
 docker pull chamusuke/unitree_autoware:0.0
@@ -35,18 +35,18 @@ bash nvidia_run_autoware.sh
 ```
 
 
-# build
+## build
  You must need to build Ros program.
  ROS compiler's in docker container.
 ```
 cd shared_dir/autoware_docker_ws && catkin_make
 ```
 
-# Hardware setting
+## Hardware setting
  You need to connect Uintree to PC and LiDAR via Ethernet.
  In addition, setting IP address on PC and LiDAR.
 
-# Autoware start 
+## Autoware start 
  You need to enter the following command in the container.
  and make subterminal.
 ```
@@ -58,8 +58,8 @@ gnome-terminal
 bash runtime_manager.sh
 ```
 
-# unitree control
-## Manual keybord control
+## unitree control
+### Manual keybord control
 
 ![localization_system](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/1721a68d-544a-4769-88eb-1519988e03d6)
 
@@ -73,7 +73,7 @@ bash filter_control.sh
 bash keybord_control.sh
 ```
 
-## Autoware control 
+### Autoware control 
 
 ![Auto_pilot](https://github.com/Chamusuke/unitree_autoware_docker/assets/120120108/5c10b394-ba5a-4da4-bb59-39241cf9bd52)
 
