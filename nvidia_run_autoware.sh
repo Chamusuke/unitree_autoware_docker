@@ -1,6 +1,6 @@
 clear
-resize -s 40 130 
-cat text/nakamura.txt
+resize -s 40 110 
+cat text/chamusuke.txt
 cat nvidia_run_autoware.sh
 #"Editer::  Nakamura Hayato 19X0118"
 #"2022-12 ~~~"
