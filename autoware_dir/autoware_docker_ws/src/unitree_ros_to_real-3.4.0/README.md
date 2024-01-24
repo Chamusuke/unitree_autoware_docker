@@ -1,4 +1,9 @@
 Packages Version: v3.4.0
+# 追加プログラム by chamusuke
+- キーボード制御
+- Autoware用の通信ドライバ（High level制御）
+- ローパスフィルター制御
+- 緊急停止用プログラム（Lidarのデータスタック対策）
 
 # Introduction
 This package can send control command to real robot from ROS. You can do low-level control(namely control all joints on robot) and high-level control(namely control the walking direction and speed of robot).
@@ -11,11 +16,6 @@ As for Aliengo or A1, please use the v3.2 release version of this package and un
 Basic message function: `unitree_legged_msgs`
 
 The interface between ROS and real robot: `unitree_legged_real`
-
-##　追加プログラム Nakamura
-- キーボード制御
-- Autoware用のドライバ
-- ローパスフィルター制御
 
 
 # Dependencies
